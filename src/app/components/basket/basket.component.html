@@ -8,6 +8,12 @@
       <p>Объем памяти: {{item.storage}}</p>
     </mat-card-content>
     <mat-card-actions>
+      <!-- Не забывай указывать тип кнопки, всегда-->
+      <!--
+       Когда ты задаешь класс button подразумевается, что это что-то вроде класса, который общий для всех кнопок на сайте
+       на деле, у тебя это не так. В таком случае лучше задавай класс по названию компонента. Например, basket__item-count-button и тп
+       Да, ангуляр инкапсулирует стили, но это не значит, что можно забывать о правильном именовании классов
+      -->
       <button class="button" mat-flat-button (click)="minusItemFromBasket(item)">-</button>
       <p>Шт: {{item.quantity}} </p>
       <button class="button" mat-flat-button (click)="plusItemFromBasket(item)">+</button>
